@@ -206,13 +206,21 @@ def practice_problem4b(sequence):
       :type sequence: (list | tuple) of (float | int)
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     ###########################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   10 minutes.
     ###########################################################################
+    list = []
+    for k in range(0, len(sequence), 2):
+        list.append(sequence[k])
+    j_for_max = 0
+    for j in range(1, len(list)):
+        if list[j] > list[j_for_max]:
+            j_for_max = j
+    return list[j_for_max]
 
 
 def run_test_practice_problem4c():
