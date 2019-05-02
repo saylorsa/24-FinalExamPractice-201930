@@ -125,7 +125,7 @@ def doubler(list1, list2):
         :type list2: list of int
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
     # -------------------------------------------------------------------------
@@ -133,6 +133,12 @@ def doubler(list1, list2):
     #    DIFFICULTY:      4
     #    TIME ESTIMATE:   5 minutes.
     # -------------------------------------------------------------------------
+    for k in range(len(list1)):
+        list1[k] = 2 * list1[k]
+    list3 = []
+    for j in range(len(list2)):
+        list3 = list3 + [2 * list2[j]]
+    return list3
 
 
 # -----------------------------------------------------------------------------
