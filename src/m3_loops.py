@@ -46,7 +46,7 @@ def main():
 def run_test_practice_problem3():
     """ Tests the   practice_problem3  function. """
     ###########################################################################
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  practice_problem3  function defined below.
     #   Include at least ** 2 ** ADDITIONAL tests beyond those we wrote.
     #
@@ -135,6 +135,22 @@ def run_test_practice_problem3():
     # SUGGESTION: Ask an assistant to CHECK your tests to confirm
     #             that they are adequate tests!
     ###########################################################################
+
+    # Test 15:
+    expected = [0, 1, 6]
+    actual = practice_problem3(0, 3, 0.5)
+    print()
+    print('Test 15:')
+    print('  Expected:', expected)
+    print('  Actual:', actual)
+
+    # Test 16:
+    expected = [-6, -5, 0, 1]
+    actual = practice_problem3(-7, 4, 0.3)
+    print()
+    print('Test 16:')
+    print('  Expected:', expected)
+    print('  Actual:', actual)
 
 
 def practice_problem3(start, n, threshold):
