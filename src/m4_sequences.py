@@ -135,13 +135,21 @@ def practice_problem4a(sequence):
       :type sequence: list | tuple | string
     """
     ###########################################################################
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     ###########################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   15 minutes.
     ###########################################################################
+    list = []
+    k_compare = 0
+    for k in range(1, len(sequence)):
+        if sequence[k_compare] == sequence[k]:
+            list.append(k_compare)
+        k_compare = k
+    return list
+
 
 
 def run_test_practice_problem4b():
