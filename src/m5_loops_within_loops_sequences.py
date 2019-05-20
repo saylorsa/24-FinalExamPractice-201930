@@ -74,7 +74,7 @@ def run_test_integers():
 
     #Test 2:
     expected = [7, 14, 21, 28, 35]
-    answer = integer([(7, 14, 'ten'),
+    answer = integers([(7, 14, 'ten'),
                       ('thirty-one', 'four'),
                       [21, 'six', 28, 35]
                       ])
@@ -105,7 +105,7 @@ def integers(sequence_of_sequences):
       :rtype: list of int
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
     ###########################################################################
@@ -128,6 +128,13 @@ def integers(sequence_of_sequences):
     #    DIFFICULTY:      6
     #    TIME ESTIMATE:  10 minutes.
     # -------------------------------------------------------------------------
+    table = []
+    for k in range(len(sequence_of_sequences)):
+        seq = sequence_of_sequences[k]
+        for j in range(len(seq)):
+            if type(seq[j]) is int:
+                table = table + [seq[j]]
+    return table
 
 
 def run_test_big_letters():
