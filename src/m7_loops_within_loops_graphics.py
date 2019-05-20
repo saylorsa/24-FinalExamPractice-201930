@@ -30,6 +30,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 ###############################################################################
 
 import rosegraphics as rg
+import math
 
 
 def main():
@@ -90,7 +91,7 @@ def hourglass(window, n, point, radius, color):
     a color that rosegraphics understands.
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #       We provided some tests for you (above).
     # -------------------------------------------------------------------------
     ###########################################################################
@@ -102,7 +103,24 @@ def hourglass(window, n, point, radius, color):
     #    DIFFICULTY:      8
     #    TIME ESTIMATE:  25 minutes (warning: this problem is challenging)
     # -------------------------------------------------------------------------
+    circle = rg.Circle(point, radius)
+    circle.fill_color = color
+    for j in range(n):
+        for k in range(j + 1):
+            for l in range(n - k):
+                cir = circle.clone()
+                cir.move_by((k - l) * (-radius), -math.sqrt(((2 * radius) ** 2) - (radius ** 2)) * (l + k))
+                cir.fill_color = color
+                cir.attach_to(window)
 
+    for j in range(n):
+        for k in range(j + 1):
+            for l in range(n - k):
+                cir = circle.clone()
+                cir.move_by((k - l) * (radius), math.sqrt(((2 * radius) ** 2) - (radius ** 2)) * (l + k))
+                cir.fill_color = color
+                cir.attach_to(window)
+    window.render()
 
 def run_test_many_hourglasses():
     """ Tests the    many_hourglasses    function. """
