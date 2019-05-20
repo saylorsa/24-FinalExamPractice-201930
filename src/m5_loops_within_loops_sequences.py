@@ -72,6 +72,15 @@ def run_test_integers():
     print('Expected is:', expected)
     print('Actual is:  ', answer)
 
+    #Test 2:
+    expected = [7, 14, 21, 28, 35]
+    answer = integer([(7, 14, 'ten'),
+                      ('thirty-one', 'four'),
+                      [21, 'six', 28, 35]
+                      ])
+    print('Expected is :', expected)
+    print('Actual is:   ', answer)
+
 
 def integers(sequence_of_sequences):
     """
