@@ -416,13 +416,18 @@ def practice_problem4d(sequence):
       :rtype: int
     """
     ###########################################################################
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #     The testing code is already written for you (above).
     ###########################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   15 minutes.
     ###########################################################################
+    total = 0
+    for k in range(1, len(sequence)):
+        if is_prime(sequence[k-1]) and is_prime(sequence[k]) and sequence[k] != sequence[k-1]:
+            total = total + sequence[k-1]
+    return total
 
 
 # -----------------------------------------------------------------------------
